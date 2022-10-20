@@ -6,7 +6,9 @@
 
 ## Subobjetivos
 
-* Desarrollar applicación gráfica para controlar cámara Raspberry.
+* Desarrollar applicación gráfica para controlar cámara Raspberry :heavy_check_mark:
+* Entrenar una Red Neuronal capaz de detectar a los ratones de una cubeta [EN PROCESO]
+* Conseguir que la Red Neuronal funcione en tiempo real en una Raspberry Pi.
 * Monitorizar el tiempo que pasan los ratones en una cubeta determinada mediante el uso de Computer Vision y Raspberry.
 
 ## Desarrollo
