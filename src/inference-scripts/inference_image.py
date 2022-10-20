@@ -1,28 +1,20 @@
-import os # importing OS in order to make GPU visible
-os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID" # do not change anything in here
+import os
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
 
-# specify which device you want to work on.
-# Use "-1" to work on a CPU. Default value "0" stands for the 1st GPU that will be used
-os.environ["CUDA_VISIBLE_DEVICES"]="0" # TODO: specify your computational device
-
-import tensorflow as tf # import tensorflow
-
-# checking that GPU is found
 if tf.test.gpu_device_name():
     print('GPU found')
 else:
     print("No GPU found")
 
-# other import
+import tensorflow as tf
+import sys
 import numpy as np
 from PIL import Image
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 import cv2
 
-import sys # importyng sys in order to access scripts located in a different folder
-
-# importing all scripts that will be needed to export your model and use it for inference
 from object_detection.utils import label_map_util
 from object_detection.utils import config_util
 from object_detection.utils import visualization_utils as viz_utils
