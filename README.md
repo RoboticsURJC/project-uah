@@ -7,10 +7,11 @@ Desarrollar un sistema de bajo coste de monitorización de animales de laborator
 ## Subobjetivos
 
 **:heavy_check_mark: Cumplidos**
-* Desarrollar applicación gráfica para controlar cámara Raspberry
+* Desarrollar aplicación gráfica para grabar con cámara Raspberry.
 
 **:chart_with_upwards_trend: En proceso**
-* Entrenar una Red Neuronal capaz de detectar a los ratones de una cubeta
+* Situar la cámara Raspberry para una correcta visión del interior de las cubetas.
+* Entrenar una Red Neuronal capaz de detectar a ratones en una cubeta.
 
 **:soon: Futuros**
 * Conseguir que la Red Neuronal funcione en tiempo real en una Raspberry Pi.
