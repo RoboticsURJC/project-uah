@@ -1,4 +1,5 @@
 import os
+import tensorflow as tf
 os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"]="0"
 
@@ -7,7 +8,6 @@ if tf.test.gpu_device_name():
 else:
     print("No GPU found")
 
-import tensorflow as tf
 import sys
 import numpy as np
 from PIL import Image
