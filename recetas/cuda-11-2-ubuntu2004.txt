@@ -25,7 +25,7 @@ echo 'export LD_LIBRARY_PATH=/usr/local/cuda-11.2/lib64:$LD_LIBRARY_PATH' >> ~/.
 source ~/.bashrc
 sudo ldconfig
 
-#dowload cudnn-11.2-linux-x64-v8.1.1.33.tgz from https://developer.nvidia.com/cudnn
+# Download cudnn-11.2-linux-x64-v8.1.1.33.tgz from https://developer.nvidia.com/cudnn
 CUDNN_TAR_FILE="cudnn-11.2-linux-x64-v8.1.1.33.tgz"
 wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.1.1.33/11.2_20210301/cudnn-11.2-linux-x64-v8.1.1.33.tgz
 tar -xzvf ${CUDNN_TAR_FILE}
@@ -33,3 +33,6 @@ tar -xzvf ${CUDNN_TAR_FILE}
 sudo cp -P cuda/include/cudnn.h /usr/local/cuda-11.2/include
 sudo cp -P cuda/lib64/libcudnn* /usr/local/cuda-11.2/lib64/
 sudo chmod a+r /usr/local/cuda-11.2/lib64/libcudnn*
+
+# REFERENCES
+https://gist.github.com/hiraksarkar/b4aff12ccb0f1f1a7cb301f365892f6a
