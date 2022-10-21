@@ -2,11 +2,19 @@
 
 ## Objetivo principal
 
-* Desarrollar un sistema de bajo coste de monitorización de animales de laboratorio.
+Desarrollar un sistema de bajo coste de monitorización de animales de laboratorio.
 
 ## Subobjetivos
 
-* Desarrollar applicación gráfica para controlar cámara Raspberry.
+**:heavy_check_mark: Cumplidos**
+* Desarrollar aplicación gráfica para grabar con cámara Raspberry.
+
+**:chart_with_upwards_trend: En proceso**
+* Situar la cámara Raspberry para una correcta visión del interior de las cubetas.
+* Entrenar una Red Neuronal capaz de detectar a ratones en una cubeta.
+
+**:soon: Futuros**
+* Conseguir que la Red Neuronal funcione en tiempo real en una Raspberry Pi.
 * Monitorizar el tiempo que pasan los ratones en una cubeta determinada mediante el uso de Computer Vision y Raspberry.
 
 ## Desarrollo
