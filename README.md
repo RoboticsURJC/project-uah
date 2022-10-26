@@ -27,5 +27,5 @@ Todo el progreso del proyecto se relata en la [Wiki](https://github.com/Robotics
 
 ## Personal de investigación
 
-* Investigadores: Javier Martínez Madruga.
-* Tutores: Julio Vega Pérez y Cristina Verdú Expósito.
+* Investigadores: [Javier Martínez Madruga](https://github.com/jamarma)
+* Tutores: [Julio Vega Pérez](https://gsyc.urjc.es/jmvega/) y Cristina Verdú Expósito.
