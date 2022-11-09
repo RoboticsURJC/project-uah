@@ -25,17 +25,17 @@ from object_detection.utils import config_util
 from object_detection.utils import visualization_utils as viz_utils
 from object_detection.builders import model_builder
 
-PATH_TO_MODEL_DIR = "../tensorflow-works/workspace/exported_models/ssdmobilenetv2/v1"
+PATH_TO_MODEL_DIR = "../tensorflow-workspace/exported_models/ssdmobilenetv2-fpnlite-320/v4"
 PATH_TO_SAVE_MODEL = PATH_TO_MODEL_DIR + "/saved_model"
 
 detect_fn = tf.saved_model.load(PATH_TO_SAVE_MODEL)
 
 # Load labelmap
-label_map_pbtxt_fname = "../tensorflow-works/workspace/data/label_map.pbtxt"
+label_map_pbtxt_fname = "../tensorflow-workspace/data/label_map.pbtxt"
 category_index = label_map_util.create_category_index_from_labelmap(label_map_pbtxt_fname)
 
 # Path video
-PATH_VIDEO = "../tensorflow-works/workspace/data/data_to_test/videos/test.mp4"
+PATH_VIDEO = "../tensorflow-workspace/data/data_to_test/videos/test.mp4"
 
 vs = cv2.VideoCapture(PATH_VIDEO)
 
