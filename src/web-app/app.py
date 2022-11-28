@@ -3,16 +3,21 @@ from flask import Flask, render_template, Response
 import cv2
 
 app = Flask(__name__)
+camera = CameraStream()
 
 def gen(camera):
+    camera.start()
     while(True):
-        frame = camera.read()
+        ret, frame = camera.read()
+        if not ret:
+            print("Can't receive frame...")
+            break
         ret, jpeg = cv2.imencode('.jpg',frame)
-        if jpeg is not None:
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + jpeg.tobytes() + b'\r\n\r\n')
-        else:
-            print("Frame is none")
+        if not ret:
+            print("Bad imencode operation...")
+            break
+        yield (b'--frame\r\n'
+            b'Content-Type: image/jpeg\r\n\r\n' + jpeg.tobytes() + b'\r\n\r\n')
 
 @app.route('/')
 def index():
@@ -20,7 +25,8 @@ def index():
 
 @app.route('/video_feed')
 def video_feed():
-    return Response(gen(CameraStream().start()),
+    camera.stop()
+    return Response(gen(camera),
         mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == "__main__":
