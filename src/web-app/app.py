@@ -1,9 +1,10 @@
 from camera_stream import CameraStream
+from picamera_stream import PiCameraStream
 from flask import Flask, render_template, Response
 import cv2
 
 app = Flask(__name__)
-camera = CameraStream()
+camera = PiCameraStream()
 
 def gen(camera):
     camera.start()
@@ -30,4 +31,4 @@ def video_feed():
         mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == "__main__":
-    app.run(debug=True, threaded=True)
+    app.run(debug=True, threaded=True, host="0.0.0.0")
